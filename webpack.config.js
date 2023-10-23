@@ -14,6 +14,10 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(eot|jpg|jpeg|png|svg)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   resolve: {

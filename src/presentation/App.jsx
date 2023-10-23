@@ -1,7 +1,7 @@
 import React from 'react';
-import { Header } from './header';
+import { Header } from './Header';
 import { Main } from './Main';
-import { Card } from './Card';
+import { Card } from './Main/Card';
 import { Footer } from './Footer';
 
 function App() {

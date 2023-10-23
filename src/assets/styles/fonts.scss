@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'GoodDog';
+  src:
+    local('GoodDog Regular'),
+    url(../fonts/gooddog.ttf) format('ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansMono-Bold';
+  src:
+    local('NotoSansMono-Bold'),
+    url(../fonts/NotoSansMono-Bold.ttf) format('ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'NotoSansMono-Regular';
+  src:
+    local('NotoSansMono-Regular'),
+    url(../fonts/NotoSansMono-Regular.ttf) format('ttf');
+  font-weight: normal;
+}

@@ -1,9 +1,15 @@
-// * {
-//   box-sizing: border-box;
-// }
+@import './fonts.scss';
+@import './variables.scss';
 
 html,
 body {
   margin: 0;
   padding: 0;
+  font-family: $main-font;
+}
+
+.footer {
+  font-family: $title-font;
+  background-color: $color-cyan;
+  color: $color-red;
 }
