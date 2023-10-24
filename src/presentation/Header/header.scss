@@ -2,11 +2,31 @@
   margin-bottom: 15px;
   text-align: center;
   font-size: 30px;
-  background-color: rgb(252, 252, 251);
+  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .header-logo {
   max-width: 200px;
+}
+.header-icon {
+  max-width: 22px;
+  padding-right: 3px;
+}
+.nav-item {
+  display: inline-block;
+  font-size: 20px;
+  padding: 8px;
+  color: #292b2a;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    color: #4eb7a2;
+    opacity: 0.35;
+    transition: 0.5s all;
+  }
 }
