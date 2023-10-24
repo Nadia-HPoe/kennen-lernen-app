@@ -1,24 +1,29 @@
 import React from 'react';
+import { words } from '../components/wordlist';
 
-function Card(props) {
-  const { id, german, russian } = props;
+function Card() {
   return (
-    <div className="App">
-      <table className="table-card">
-        <thead>
-          <td>#</td>
-          <td>{id}</td>
-        </thead>
-        <thead>
-          <td>Слово на немецком</td>
-          <td>{german}</td>
-        </thead>
-        <thead>
-          <td>Перевод</td>
-          <td>{russian}</td>
-        </thead>
-      </table>
-    </div>
+    <table className="table-card" border={1}>
+      <thead>
+        <tr>
+          <th className="table-col">#</th>
+          <th className="table-col">Слово на немецком</th>
+          <th className="table-col">Перевод</th>
+          <th className="table-col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {words.map(function (word, id) {
+          return (
+            <tr key={id}>
+              <th>{1 + id}</th>
+              <th>{word.german}</th>
+              <th>{word.russian}</th>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 }
 export { Card };

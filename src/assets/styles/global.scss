@@ -13,3 +13,14 @@ body {
   background-color: $color-cyan;
   color: $color-red;
 }
+h1,
+h2 {
+  font-family: $title-font;
+  color: $color-red;
+}
+ul {
+  font-weight: lighter;
+  list-style-type: square;
+  list-style-position: inside;
+  list-style-image: url(../pencil-solid.svg);
+}

@@ -1,11 +1,14 @@
 import React from 'react';
+import { Welcome } from './Welcome';
 import { Card } from './Card';
-import { words } from '../components/wordlist';
+import './main.scss';
 
 function Main() {
-  const wordList = words.map((word) => (
-    <Card key={word.id} german={word.german} russian={word.russian} />
-  ));
-  return <main className="maincontent">{wordList}</main>;
+  return (
+    <main className="maincontent">
+      <Welcome />
+      <Card />
+    </main>
+  );
 }
 export { Main };
