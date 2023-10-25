@@ -1,9 +1,6 @@
 import React from 'react';
 import { words } from '../components/wordlist';
-import { SaveImg } from './images/square-check-solid.svg';
-import { EditImg } from './images/pencil-solid.svg';
-import { DeleteImg } from './images/trash-solid.svg';
-
+import { Icons } from './components';
 function Card() {
   return (
     <table className="table-card" border={1}>
@@ -12,7 +9,7 @@ function Card() {
           <th className="table-col-0">#</th>
           <th className="table-col">Слово на немецком</th>
           <th className="table-col">Перевод</th>
-          <th className="table-col"></th>
+          <th className="table-col-4"></th>
         </tr>
       </thead>
       <tbody>
@@ -22,16 +19,16 @@ function Card() {
               <th>{1 + id}</th>
               <th>{word.german}</th>
               <th>{word.russian}</th>
-              <th>
+              <th className="table-buttons">
                 <button className="table-save">
-                  <img src={SaveImg} alt="save" />
                   Save
+                  <Icons name="square" color="#fff" size="22" />
                 </button>
                 <button className="table-edit">
-                  <img src={EditImg} alt="edit" />
+                  <Icons name="pencil" color="#fff" size="20" />
                 </button>
                 <button className="table-delete">
-                  <img src={DeleteImg} alt="delete" />
+                  <Icons name="trash" color="#fff" size="20" />
                 </button>
               </th>
             </tr>
