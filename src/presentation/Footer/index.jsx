@@ -5,8 +5,10 @@ import FooterLogo from './images/kl_app_icon.png';
 function Footer() {
   return (
     <footer className="footer">
-      Kennen? Lernen!
-      <img src={FooterLogo} alt="smalllogotype" />
+      <div>
+        Kennen? Lernen!
+        <img src={FooterLogo} alt="smalllogotype" className="footer-logo" />
+      </div>
       <p className="footer-text">
         All Rights Reserved<span>&copy;</span> 2023
       </p>

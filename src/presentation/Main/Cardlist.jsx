@@ -1,7 +1,10 @@
 import React from 'react';
 import { words } from '../components/wordlist';
-import { Icons } from './components';
-function Card() {
+import { EditButton } from './components/EditButton';
+import { SaveButton } from './components/SaveButton';
+import { DeleteButton } from './components/DeleteButton';
+
+function Cardlist() {
   return (
     <table className="table-card" border={1}>
       <thead>
@@ -19,17 +22,11 @@ function Card() {
               <th>{1 + id}</th>
               <th>{word.german}</th>
               <th>{word.russian}</th>
+
               <th className="table-buttons">
-                <button className="table-save">
-                  Save
-                  <Icons name="square" color="#fff" size="22" />
-                </button>
-                <button className="table-edit">
-                  <Icons name="pencil" color="#fff" size="20" />
-                </button>
-                <button className="table-delete">
-                  <Icons name="trash" color="#fff" size="20" />
-                </button>
+                <SaveButton />
+                <EditButton />
+                <DeleteButton />
               </th>
             </tr>
           );
@@ -38,4 +35,4 @@ function Card() {
     </table>
   );
 }
-export { Card };
+export { Cardlist };
