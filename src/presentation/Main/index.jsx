@@ -7,10 +7,6 @@ function Main() {
   return (
     <main className="maincontent">
       <Welcome />
-      <label>
-        <input type="checkbox" className="main-edit-checkbox" />
-        Открыть режим редактирования
-      </label>
       <Cardlist />
     </main>
   );
