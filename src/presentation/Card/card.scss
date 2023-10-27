@@ -8,11 +8,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: NotoSansMono-Regular, sans-serif;
+  justify-content: space-around;
+  font-family: 'NotoSansMono-Regular', sans-serif;
 }
-
+.card-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
 .card-button {
+  position: absolute;
   font-weight: 700;
   color: white;
   text-decoration: none;
@@ -21,10 +28,29 @@
   background: #4eb7a2;
   transition: 0.2s;
   text-align: center;
+
+  &:hover {
+    background: #68c0e0;
+    transition: 0.5s all;
+  }
+  &:active {
+    background: #4eb7a2;
+    box-shadow: 0 3px #4eb7a2 inset;
+  }
 }
+
+.hidden {
+  display: none;
+}
+
 .card-text {
   color: #3b3938;
   font-weight: 700;
   font-size: 25pt;
-  margin-bottom: 20px;
+}
+.card-translation {
+  position: absolute;
+  margin-bottom: 25px;
+  ///color: #4eb7a2;
+  color: red;
 }

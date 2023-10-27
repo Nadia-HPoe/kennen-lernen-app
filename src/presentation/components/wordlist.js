@@ -71,6 +71,44 @@ const words = [
     tags_json: '["familie"]',
   },
   {
+    id: '26',
+    german: 'die Schwester',
+    russian: 'сестра',
+    tags: 'familie',
+    tags_json: '["familie"]',
+  },
+  {
+    id: '27',
+    german: 'der Großvater',
+    russian: 'дед',
+    tags: 'familie',
+    tags_json: '["familie"]',
+  },
+
+  {
+    id: '28',
+    german: 'die Großmutter',
+    russian: 'бабушка',
+    tags: 'familie',
+    tags_json: '["familie"]',
+  },
+
+  {
+    id: '29',
+    german: 'der Enkel',
+    russian: 'внук',
+    tags: 'familie',
+    tags_json: '["familie"]',
+  },
+
+  {
+    id: '30',
+    german: 'die Enkelin',
+    russian: 'внучка',
+    tags: 'familie',
+    tags_json: '["familie"]',
+  },
+  {
     id: '31',
     german: 'die Katze',
     russian: 'кошка',
@@ -79,8 +117,68 @@ const words = [
   },
   {
     id: '32',
-    german: 'der Hund ',
+    german: 'der Hund',
     russian: 'собака',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+  {
+    id: '33',
+    german: 'der Vogel',
+    russian: 'птица',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+  {
+    id: '34',
+    german: 'der Wolf',
+    russian: 'волк',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+  {
+    id: '35',
+    german: 'das Kaninchen',
+    russian: 'кролик',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+  {
+    id: '36',
+    german: 'der Hase',
+    russian: 'заяц',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+
+  {
+    id: '37',
+    german: 'der Frosch',
+    russian: 'лягушка',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+
+  {
+    id: '38',
+    german: 'der Fuchs',
+    russian: 'лиса',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+
+  {
+    id: '39',
+    german: 'die Ratte',
+    russian: 'крыса',
+    tags: 'tier',
+    tags_json: '["tier"]',
+  },
+
+  {
+    id: '40',
+    german: 'das Pferd',
+    russian: 'лошадь',
     tags: 'tier',
     tags_json: '["tier"]',
   },
