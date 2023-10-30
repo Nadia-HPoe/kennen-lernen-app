@@ -1,23 +1,24 @@
+@use './variables';
 @import './fonts.scss';
-@import './variables.scss';
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: $main-font;
+  font-family: variables.$main-font;
 }
 
 .footer {
-  font-family: $title-font;
-  background-color: $color-cyan;
-  color: $color-red;
+  font-family: variables.$title-font;
+  background-color: variables.$color-cyan;
+  color: variables.$color-red;
 }
 h1,
 h2 {
-  font-family: $title-font;
-  color: $color-red;
+  font-family: variables.$title-font;
+  color: variables.$color-red;
   text-align: center;
+  font-size: 25pt;
 }
 ul {
   font-weight: lighter;

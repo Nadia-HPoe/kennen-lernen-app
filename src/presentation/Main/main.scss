@@ -1,16 +1,26 @@
+@use '../../assets/styles/variables';
+
 .table-card {
   border-radius: 0.5;
   width: 90%;
+  font-family: variables.$main-font;
 }
 
 .table-col {
   width: 30%;
+  font-weight: 700;
+  font-size: 18pt;
+  color: variables.$color-darkgrey;
 }
 .table-col-0,
 .table-col-4 {
   width: 15%;
 }
-
+.table-row {
+  font-weight: 400;
+  font-size: 12pt;
+  color: black;
+}
 .table-buttons {
   display: flex;
   align-items: center;

@@ -1,3 +1,5 @@
+@use '../../assets/styles/variables';
+
 .navbar {
   margin-bottom: 15px;
   text-align: center;
@@ -19,13 +21,13 @@
   display: inline-block;
   font-size: 20px;
   padding: 8px;
-  color: #292b2a;
+  color: variables.$color-darkgrey;
   text-align: center;
   outline: none;
   text-decoration: none;
 
   &:hover {
-    color: #4eb7a2;
+    color: variables.$color-cyan;
     opacity: 0.35;
     transition: 0.5s all;
   }

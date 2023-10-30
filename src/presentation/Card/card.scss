@@ -1,3 +1,5 @@
+@use '../../assets/styles/variables';
+
 .card-body {
   width: 200px;
   height: 250px;
@@ -9,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-family: 'NotoSansMono-Regular', sans-serif;
+  font-family: variables.$main-font-bold;
 }
 .card-wrapper {
   position: relative;
@@ -25,17 +27,18 @@
   text-decoration: none;
   padding: 0.8em 1em calc(0.8em + 3px);
   border-radius: 3px;
-  background: #4eb7a2;
+  background: variables.$color-cyan;
   transition: 0.2s;
   text-align: center;
+  cursor: pointer;
 
   &:hover {
-    background: #68c0e0;
+    background: variables.$color-blue;
     transition: 0.5s all;
   }
   &:active {
-    background: #4eb7a2;
-    box-shadow: 0 3px #4eb7a2 inset;
+    background: variables.$color-blue;
+    box-shadow: 0 3px variables.$color-blue inset;
   }
 }
 
@@ -44,13 +47,14 @@
 }
 
 .card-text {
-  color: #3b3938;
+  color: variables.$color-darkgrey;
   font-weight: 700;
   font-size: 25pt;
 }
 .card-translation {
   position: absolute;
   margin-bottom: 25px;
-  ///color: #4eb7a2;
-  color: red;
+  color: variables.$color-red;
+  font-family: variables.$title-font;
+  font-size: 20pt;
 }

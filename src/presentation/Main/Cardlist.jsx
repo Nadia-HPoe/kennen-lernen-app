@@ -32,9 +32,9 @@ function Cardlist() {
           {words.map(function (word, id) {
             return (
               <tr key={id}>
-                <th>{1 + id}</th>
-                <th>{word.german}</th>
-                <th>{word.russian}</th>
+                <th className="table-row">{1 + id}</th>
+                <th className="table-row">{word.german}</th>
+                <th className="table-row">{word.russian}</th>
 
                 <th className={'table-buttons ' + (clicked ? '' : 'hidden')}>
                   <SaveButton />
