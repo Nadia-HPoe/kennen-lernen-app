@@ -1,10 +1,10 @@
 import React from 'react';
 import { Icons } from '.';
 
-function DeleteButton() {
+function DeleteButton({ onClick }) {
   return (
-    <button className="table-delete">
-      <Icons name="trash" color="#fff" size="20" />
+    <button className="table-delete" onClick={onClick}>
+      <Icons name="cross" color="#fff" size="22" />
     </button>
   );
 }

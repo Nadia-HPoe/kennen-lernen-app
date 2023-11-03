@@ -24,14 +24,17 @@
 .table-buttons {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   gap: 3.5px;
 }
 
 .table-save,
 .table-edit,
 .table-delete {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
   color: white;
   text-decoration: none;
   padding: 0.3em 1em;
@@ -40,13 +43,9 @@
   border-style: solid none;
   border-radius: 6px;
   transition: 0.2s;
+  font-size: 9pt;
 }
 .table-save {
-  font-size: 11pt;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1px;
   border-color: #55fd33 #000 #5ad706;
   background: #0c9c0d linear-gradient(#66d174, #049b04);
 
