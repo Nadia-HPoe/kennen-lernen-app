@@ -64,7 +64,6 @@ function Cardlist() {
             <tr key={id}>
               <th className="table-row">{1 + id}</th>
               <th className="table-row">
-                {/* Если строка редактируется, отображаем инпут, иначе - текст */}
                 {editingIndex === id ? (
                   <input
                     value={word.german}

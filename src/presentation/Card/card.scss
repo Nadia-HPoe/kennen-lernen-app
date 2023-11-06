@@ -1,5 +1,15 @@
 @use '../../assets/styles/variables';
-
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-container {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .card-body {
   width: 200px;
   height: 250px;
@@ -57,4 +67,26 @@
   color: variables.$color-red;
   font-family: variables.$title-font;
   font-size: 20pt;
+}
+
+.prevcard,
+.nextcard {
+  color: white;
+  text-decoration: none;
+  padding: 0.3em 1em;
+  outline: none;
+  border-width: 1px 0;
+  border-style: solid none;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 9pt;
+  border-color: variables.$color-blue #000 variables.$color-blue;
+  background: variables.$color-blue;
+
+  &:hover {
+    background: variables.$color-cyan;
+  }
+  &:active {
+    background: variables.$color-cyan;
+  }
 }
