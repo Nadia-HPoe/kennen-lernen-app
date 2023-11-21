@@ -3,7 +3,6 @@
 
 html,
 body {
-  margin: 0;
   padding: 0;
   font-family: variables.$main-font;
 }
@@ -25,4 +24,8 @@ ul {
   list-style-type: square;
   list-style-position: inside;
   list-style-image: url(../pencil-solid.svg);
+}
+
+.contact_link {
+  color: variables.$color-cyan;
 }

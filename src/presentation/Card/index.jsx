@@ -9,13 +9,6 @@ function Card() {
     setPressed(!pressed);
   };
 
-  // useEffect(() => {
-  //   setPressed(false);
-  // }, [words.id]);
-
-  // const randomIndex = Math.floor(Math.random() * words.length);
-  // const randomWord = words[randomIndex].german;
-
   const [count, setCount] = useState(0);
   const [wordlist] = useState([...words].sort(() => Math.random() - 0.5));
 

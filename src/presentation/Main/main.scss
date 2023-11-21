@@ -1,5 +1,12 @@
 @use '../../assets/styles/variables';
 
+.maincontent {
+  flex: 1 0 auto;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .table-card {
   border-radius: 0.5;
   width: 90%;

@@ -1,12 +1,11 @@
 .footer {
-  height: 100px;
   color: whitesmoke;
-  margin-bottom: 15px;
   text-align: center;
   font-size: 30px;
   display: flex;
   flex: 0 0 auto;
   justify-content: space-around;
+  align-items: end;
 }
 
 .footer-text {
