@@ -13,8 +13,8 @@ function Card() {
   //   setPressed(false);
   // }, [words.id]);
 
-  const randomIndex = Math.floor(Math.random() * words.length);
-  const randomWord = words[randomIndex].german;
+  // const randomIndex = Math.floor(Math.random() * words.length);
+  // const randomWord = words[randomIndex].german;
 
   const [count, setCount] = useState(0);
   const [wordlist] = useState([...words].sort(() => Math.random() - 0.5));
@@ -22,12 +22,14 @@ function Card() {
   function showPrev() {
     if (count !== 0) {
       setCount(count - 1);
+      setPressed(false);
     }
   }
 
   function showNext() {
     if (count < wordlist.length - 1) {
       setCount(count + 1);
+      setPressed(false);
     }
   }
 
@@ -39,7 +41,7 @@ function Card() {
           <Icons name="chevron-left" color="#fff" size="22" />
         </button>
         <div className="card-body">
-          <div className="card-text">{randomWord}</div>
+          <div className="card-text">{wordlist[count].german}</div>
           <div className="card-wrapper">
             <button
               className={'card-button ' + (pressed ? 'hidden' : '')}
@@ -48,7 +50,7 @@ function Card() {
               Показать перевод
             </button>
             <p className={'card-translation ' + (pressed ? '' : 'hidden')}>
-              {words[randomIndex].russian}
+              {wordlist[count].russian}
             </p>
           </div>
         </div>
