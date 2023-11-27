@@ -1,6 +1,9 @@
 @use '../../assets/styles/variables';
 
 .navbar {
+  position: sticky;
+  top: 0;
+  min-height: 2em;
   margin-bottom: 15px;
   text-align: center;
   font-size: 30px;
@@ -36,5 +39,5 @@
   text-align: center;
 }
 .error-image {
-  max-width: 300px;
+  max-width: 200px;
 }
