@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { words } from '../components/wordlist';
 import { Icons } from '../Main/components/Icons';
 import './card.scss';
 
 function Card() {
-  const [pressed, setPressed] = useState(false);
-  const handleChange = () => {
-    setPressed(!pressed);
-  };
+  const buttonRef = useRef(null);
 
+  const [pressed, setPressed] = useState(false);
+  const [learned, setLearned] = useState(0);
   const [count, setCount] = useState(0);
   const [wordlist] = useState([...words].sort(() => Math.random() - 0.5));
+
+  const handleChange = () => {
+    setPressed(!pressed);
+    if (learned < wordlist.length - 1) {
+      setLearned(learned + 1);
+    }
+  };
 
   function showPrev() {
     if (count !== 0) {
@@ -23,6 +29,7 @@ function Card() {
     if (count < wordlist.length - 1) {
       setCount(count + 1);
       setPressed(false);
+      buttonRef.current.focus();
     }
   }
 
@@ -37,6 +44,7 @@ function Card() {
           <div className="card-text">{wordlist[count].german}</div>
           <div className="card-wrapper">
             <button
+              ref={buttonRef}
               className={'card-button ' + (pressed ? 'hidden' : '')}
               onClick={handleChange}
             >
@@ -46,6 +54,7 @@ function Card() {
               {wordlist[count].russian}
             </p>
           </div>
+          <p className="card-counttext">Изучено слов:{learned}</p>
         </div>
         <button className="nextcard" onClick={showNext}>
           <Icons name="chevron-right" color="#fff" size="22" />
