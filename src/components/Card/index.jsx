@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { words } from '../components/wordlist';
-import { Icons } from '../Main/components/Icons';
+import { words } from '../wordlist';
+import { Icons } from '../icons/Icons';
 import './card.scss';
 
 function Card() {

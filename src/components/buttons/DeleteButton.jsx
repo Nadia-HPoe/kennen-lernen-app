@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icons } from '.';
+import { Icons } from '../icons/Icons';
 
 function DeleteButton({ onClick }) {
   return (

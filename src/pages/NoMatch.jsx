@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ErrorImg from '../../Header/images/kl_app_icon_404.png';
+import ErrorImg from '../pages/Header/images/kl_app_icon_404.png';
 
 function NoMatch() {
   return (

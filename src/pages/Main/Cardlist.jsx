@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { words } from '../components/wordlist';
-import { EditButton } from './components/EditButton';
-import { SaveButton } from './components/SaveButton';
-import { DeleteButton } from './components/DeleteButton';
+import { words } from '../../components/wordlist';
+import { EditButton } from '../../components/buttons/EditButton';
+import { SaveButton } from '../../components/buttons/SaveButton';
+import { DeleteButton } from '../../components/buttons/DeleteButton';
 
 function Cardlist() {
   const [clicked, setClicked] = useState(false);

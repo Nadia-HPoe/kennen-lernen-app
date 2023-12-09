@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Card } from '../Card';
+import { Card } from '../../components/Card';
 import './header.scss';
 import Logo from './images/kl_app_logo_header.png';
 import { Main } from '../Main';
-import { NoMatch } from '../Main/components/NoMatch';
-import { About } from '../Main/About';
+import { NoMatch } from '../NoMatch';
+import { About } from '../About';
 
 function Header() {
   return (
