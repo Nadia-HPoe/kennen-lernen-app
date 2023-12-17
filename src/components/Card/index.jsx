@@ -1,15 +1,21 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { words } from '../wordlist';
 import { Icons } from '../icons/Icons';
 import './card.scss';
 
 function Card() {
-  const buttonRef = useRef(null);
+  const ref = useRef();
 
   const [pressed, setPressed] = useState(false);
   const [learned, setLearned] = useState(0);
   const [count, setCount] = useState(0);
   const [wordlist] = useState([...words].sort(() => Math.random() - 0.5));
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.focus();
+    }
+  }, [count]);
 
   const handleChange = () => {
     setPressed(!pressed);
@@ -29,7 +35,6 @@ function Card() {
     if (count < wordlist.length - 1) {
       setCount(count + 1);
       setPressed(false);
-      buttonRef.current.focus();
     }
   }
 
@@ -44,7 +49,6 @@ function Card() {
           <div className="card-text">{wordlist[count].german}</div>
           <div className="card-wrapper">
             <button
-              ref={buttonRef}
               className={'card-button ' + (pressed ? 'hidden' : '')}
               onClick={handleChange}
             >
@@ -56,7 +60,7 @@ function Card() {
           </div>
           <p className="card-counttext">Изучено слов:{learned}</p>
         </div>
-        <button className="nextcard" onClick={showNext}>
+        <button ref={ref} className="nextcard" onClick={showNext}>
           <Icons name="chevron-right" color="#fff" size="22" />
         </button>
       </div>

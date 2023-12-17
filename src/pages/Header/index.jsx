@@ -4,6 +4,7 @@ import { Card } from '../../components/Card';
 import './header.scss';
 import Logo from './images/kl_app_logo_header.png';
 import { Main } from '../Main';
+import { SignUpForm } from '../Signup';
 import { NoMatch } from '../NoMatch';
 import { About } from '../About';
 
@@ -21,9 +22,9 @@ function Header() {
         <a className="nav-item" href="">
           Войти
         </a>
-        <a className="nav-item" href="">
+        <Link to="/signup" className="nav-item">
           Регистрация
-        </a>
+        </Link>
 
         <Link to="/about" className="nav-item">
           О нас
@@ -32,6 +33,7 @@ function Header() {
       <Routes>
         <Route path="/game" element={<Card />} />
         <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<SignUpForm />} />
         <Route path="/" element={<Main />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>

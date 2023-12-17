@@ -10,7 +10,10 @@ function Cardlist() {
     setClicked(!clicked);
   };
 
+  const [isBlocked, setBlocked] = useState(false);
+
   const [editingIndex, setEditingIndex] = useState(null);
+
   // Хук состояния для временного списка слов
   const [tempWords, setTempWords] = useState(words);
 
@@ -23,6 +26,7 @@ function Cardlist() {
   const handleSave = (index) => {
     setEditingIndex(null);
     words[index] = tempWords[index];
+    console.log(words);
   };
 
   // Обработчик для отмены редактирования
@@ -37,7 +41,12 @@ function Cardlist() {
   const handleChange = (index, key, value) => {
     const updatedWords = [...tempWords];
     updatedWords[index][key] = value;
-    setTempWords(updatedWords);
+    if (value !== '') {
+      setTempWords(updatedWords);
+    } else {
+      console.log('Empty field!');
+      setBlocked(!isBlocked);
+    }
   };
 
   return (
@@ -66,6 +75,8 @@ function Cardlist() {
               <th className="table-row">
                 {editingIndex === id ? (
                   <input
+                    type="text"
+                    className={isBlocked ? 'empty' : ''}
                     value={word.german}
                     onChange={(e) => handleChange(id, 'german', e.target.value)}
                   />
@@ -76,6 +87,8 @@ function Cardlist() {
               <th className="table-row">
                 {editingIndex === id ? (
                   <input
+                    type="text"
+                    className={isBlocked ? 'empty' : ''}
                     value={word.russian}
                     onChange={(e) =>
                       handleChange(id, 'russian', e.target.value)
@@ -89,7 +102,11 @@ function Cardlist() {
               <th className={'table-buttons ' + (clicked ? '' : 'hidden')}>
                 {editingIndex === id ? (
                   <>
-                    <SaveButton onClick={() => handleSave(id)} />
+                    <SaveButton
+                      onClick={() => handleSave(id)}
+                      isBlocked={isBlocked}
+                      setBlocked={setBlocked}
+                    />
                     <DeleteButton onClick={() => handleCancel(id)} />
                   </>
                 ) : (

@@ -1,2 +1,2 @@
-import { Icons } from '.';
+import { Icons } from './Icons';
 export { Icons };
