@@ -43,9 +43,10 @@ function Cardlist() {
     updatedWords[index][key] = value;
     if (value !== '') {
       setTempWords(updatedWords);
+      setBlocked(false);
     } else {
       console.log('Empty field!');
-      setBlocked(!isBlocked);
+      setBlocked(true);
     }
   };
 

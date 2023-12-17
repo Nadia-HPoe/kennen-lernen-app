@@ -49,6 +49,7 @@ function Card() {
           <div className="card-text">{wordlist[count].german}</div>
           <div className="card-wrapper">
             <button
+              ref={ref}
               className={'card-button ' + (pressed ? 'hidden' : '')}
               onClick={handleChange}
             >
@@ -60,7 +61,7 @@ function Card() {
           </div>
           <p className="card-counttext">Изучено слов:{learned}</p>
         </div>
-        <button ref={ref} className="nextcard" onClick={showNext}>
+        <button className="nextcard" onClick={showNext}>
           <Icons name="chevron-right" color="#fff" size="22" />
         </button>
       </div>
