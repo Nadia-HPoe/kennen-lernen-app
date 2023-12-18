@@ -7,6 +7,7 @@ import { Main } from '../Main';
 import { SignUpForm } from '../Signup';
 import { NoMatch } from '../NoMatch';
 import { About } from '../About';
+import { newCardlist } from '../Main/newCardlist';
 
 function Header() {
   return (
@@ -18,6 +19,9 @@ function Header() {
 
         <Link to="/game" className="nav-item">
           Карточки
+        </Link>
+        <Link to="/english" className="nav-item">
+          Слова на английском
         </Link>
         <a className="nav-item" href="">
           Войти
@@ -32,6 +36,7 @@ function Header() {
       </header>
       <Routes>
         <Route path="/game" element={<Card />} />
+        <Route path="/english" element={<newCardlist />} />
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUpForm />} />
         <Route path="/" element={<Main />} />
